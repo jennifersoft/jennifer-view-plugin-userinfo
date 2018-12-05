@@ -38,7 +38,7 @@ public class PluginUserInfoController extends PluginController {
 
     @RequestMapping(value = { "/userinfo" }, method = RequestMethod.GET)
     @ResponseBody
-    public List<Map<String, String>> getMainPage(@RequestParam String domainId) {
+    public List<Map<String, String>> getMainPage(@RequestParam String domain_id) {
         List<Map<String, String>> result = new ArrayList<Map<String, String>>();
         List<Group> groups = this.groupService.list();
         List<User> users = this.userService.list();
@@ -47,7 +47,7 @@ public class PluginUserInfoController extends PluginController {
         for(Group group : groups) {
             try {
                 JSONObject json = new JSONObject(group.getTarget());
-                if(json.has(domainId)) {
+                if(json.has(domain_id)) {
                     existGroupIds.put(group.getId(), true);
                 }
             } catch (JSONException e) {
