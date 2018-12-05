@@ -21,4 +21,4 @@ Different versions of the server support different plug-in versions.
 
 ## How to use
 
-http://{HOST_NAME}:{PORT_NAME}/plugin/userinfo?token={PLUGIN_API_TOKEN}&domain_id={DOMAIN_ID}
+http://{HOST_NAME}:{PORT}/plugin/userinfo?token={PLUGIN_API_TOKEN}&domain_id={DOMAIN_ID}
